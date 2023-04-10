@@ -5,6 +5,9 @@ import "./App.css";
 import Navbar from "./components/NavBar";
 import { Route, Routes } from "react-router-dom";
 import HomePage from "./pages/HomePage";
+import ProjectListPage from "./pages/ProjectListPage";
+import ProjectDetailsPage from "./pages/ProjectDetailsPage";
+import EditProjectPage from "./pages/EditProject";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -15,6 +18,9 @@ function App() {
 
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/projects" element={<ProjectListPage />} />
+        <Route path="/projects/:projectId" element={<ProjectDetailsPage />} />
+        <Route path="/projects/edit/:projectId" element={<EditProjectPage />} />
       </Routes>
     </div>
   );
