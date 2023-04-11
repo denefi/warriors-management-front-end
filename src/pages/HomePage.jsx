@@ -1,6 +1,9 @@
+import { useContext } from "react";
+import { ThemeContext } from "../context/theme.context";
+
 // src/pages/HomePage.js
 function HomePage() {
-  console.log(import.meta.env.VITE_API_URL);
+  console.log(useContext(ThemeContext));
   return (
     <div>
       <h1>Home Page</h1>
