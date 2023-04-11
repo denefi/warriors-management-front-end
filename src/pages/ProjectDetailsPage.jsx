@@ -3,7 +3,7 @@ import { Link, useParams } from "react-router-dom"; // <== IMPORT
 import axios from "axios";
 import AddTask from "../components/AddTask";
 
-const API_URL = "http://localhost:5005"; // <== ADD
+const API_URL = import.meta.env.VITE_API_URL; // <== ADD
 
 function ProjectDetailsPage(props) {
   const [project, setProject] = useState(null);
